@@ -1,0 +1,28 @@
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  /* background-color: red; */
+  background : url("../images/top.png") no-repeat;
+  background-size: 80px 80px;
+  width: 80px;
+  height: 80px;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  /* opacity:1; */
+}
+
+#myBtn:hover {
+  opacity:1;
+  /* background-color: #555; */
+  background : url("../images/tophov.png") no-repeat;
+  background-size: 80px 80px;
+  width: 80px;
+  height: 80px;
+}

@@ -1,0 +1,792 @@
+*{
+    box-sizing: border-box;
+}
+html {
+  scroll-behavior:smooth;
+}
+.border-2{
+    border-width: 2px !important;
+}
+.bold{
+    font-weight: 500;
+}
+.cursor-pointer{
+    cursor: pointer;
+}
+.font-5{
+    font-size: 1.5rem;
+}
+.w-65{
+    width: 65px;
+}
+.w-90{
+    width: 90% !important;
+}
+.w-15{
+    max-width: 15%;
+}
+.h-90{
+    height: 90%;
+}
+label{
+    margin-bottom: 0 !important;
+}
+@media only screen and (min-width:600px){
+    div#product_sect div.col-lg-3, div#product_sect div.col-md-4, div#news_sect div.col-md-4, div#sectionLokasi div.col-lg-4, div#sectionLokasi div.col-md-6, .col-md-12{
+        padding: 0px !important;
+    }
+}
+/*@media only screen and (min-width:600px){
+    .col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto{
+        padding: 0px !important;
+    }
+}*/
+@media only screen and (min-width:992px){
+    .modal-lg{
+        max-width: 50% !important;
+    }    
+}
+div.img-hidden > img:first-child{
+    visibility:hidden;
+}
+img.logo-capella{
+    width: 25%;
+}
+img.logo-daihatsu{
+    width: 10%;
+}
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    background: #005aff;
+    color: white;
+    margin: 0;
+}
+ul.marquee li {
+    display: inline-block;
+    font-size: 16px;
+    padding: 5px 10px;
+    font-weight: 500;
+}
+ul.marquee li:not(:last-child):after{
+    content: "|";
+    margin-left: 22px;
+}
+
+/*
+header{
+    padding: 1%;
+}
+header img.logo-capella{
+    width: 30%;
+    margin-left: 35%;
+}
+header img.logo-daihatsu{
+    width: 10%;
+    margin-left: 24%;
+}
+*/
+i.fa-reorder{
+    color: white;
+}
+div.navigation{
+    position:sticky;
+    top:0;
+    z-index: 2;
+}
+nav.navbar{
+    background-color:white;
+}
+ul.navbar-nav li.nav-item a.nav-link{
+    text-transform: uppercase;
+    padding: 10px 15px;
+    font-size: 80%;
+}
+ul.navbar-nav li.nav-item a.nav-link{
+    color: black;
+}
+ul.navbar-nav li.nav-item a.nav-link:after{
+    display: block;
+    content: "";
+    border-bottom: 3px solid coral;
+    transform: scaleX(0);
+    transition: 1s;
+}
+ul.navbar-nav li.nav-item a.nav-link:hover:after{
+    transform: scaleX(1);
+}
+div.aside{
+    position: fixed;
+    top: 50%;
+    right: 0;
+    z-index: 1;
+    background-color: white;
+}
+div.aside ul{
+    margin: 0;
+    padding: 0;
+}
+div.aside ul li{
+    list-style-type: none;
+    padding: 10px;
+}
+div.footer{
+    background: #222222;
+    color: white;
+    padding: 20px 0;
+}
+div.footer div.judul{
+    font-weight: bold;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+div.footer div.isi{
+    font-size: 12px;
+}
+div.footer form input,div.footer form button{
+    height:25px; 
+}
+div.footer form input{
+    width: 200px;
+    padding:5px 10px;
+    padding:5px 10px; 
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+}
+div.footer form button{
+    font-size: 15px;
+    padding: 0 10px;;
+}
+@media only screen and (max-width:767px){
+    img.logo-capella{
+        width: 50%;
+        margin-left: 23%;
+    }
+}
+@media only screen and (max-width:894px){
+    img.logo-daihatsu{
+        display: none;
+    }
+
+}
+
+/*Button CSS*/
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  /* background-color: red; */
+  background : url("../images/top.png") no-repeat;
+  background-size: 80px 80px;
+  width: 80px;
+  height: 80px;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  /* opacity:1; */
+}
+#myBtn:hover {
+  opacity:1;
+  /* background-color: #555; */
+  background : url("../images/tophov.png") no-repeat;
+  background-size: 80px 80px;
+  width: 80px;
+  height: 80px;
+}
+
+
+
+
+
+
+
+
+
+/*Home css*/
+/*.jumbotron{
+    background: url('../images/bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 300px;
+}*/
+/*
+div#promoList div.card-body div.isi{
+    display: block;
+    display: -webkit-box;
+    max-width: 100%;
+    height: 100px;
+    margin: 0 auto;
+    text-align: justify;
+    text-justify: inter-character;
+    line-height: 10px;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+*/
+div.productList{
+    max-width: 23% !important;
+    margin-bottom: 2%;
+}
+div.productList:nth-child(2n),div.productList:nth-child(4n+3){
+    margin-left: 2.66% !important;
+}
+@media only screen and (max-width:992px){
+    div.productList{
+        max-width: 32.33% !important;
+        margin: 0 !important;
+        margin-bottom: 2% !important;
+    }
+    div.productList:nth-child(2n),div.productList:nth-child(3n),div.productList:nth-child(3n+2){
+        margin-left: 1.5% !important;
+    }
+    div.productList:nth-child(3n+1){
+        margin-left: 0 !important;
+    }
+}
+@media only screen and (max-width:768px){
+    div.productList{
+        max-width: 100% !important;
+        margin-top: 5% !important;
+    }
+    div.productList:nth-child(1){
+        margin-top: 0 !important;
+    }
+    div.productList:nth-child(2n),div.productList:nth-child(3n){
+        margin-left: 0 !important;
+    }
+}
+/*
+div.productList div.price_list{
+     cursor: pointer;
+}
+div.price_list:hover{
+     color: darkblue !important;
+}
+*/
+div.card-body button{
+    width: 33.33%;
+    font-size: 12px;
+}
+div.productList ul{
+    margin:10px 0;
+    padding:0;
+    list-style:none;
+}
+div.productList ul li{
+    display: inline-block;
+    margin: 0 3px;
+}
+div.productList ul li div{
+    border-radius:50%;
+    width:20px;
+    height:20px;
+}
+img#booking_service,img#test_drive,img#contact_us,img#s_kredit{
+    cursor: pointer;
+}
+div.newsList{
+    max-width: 32.33%;
+}
+div.newsList:nth-child(2n),div.newsList:nth-child(3n),div.newsList:nth-child(3n+2){
+        margin-left: 1.5% !important;
+}
+div.newsList:nth-child(3n+1){
+    margin-left: 0 !important;
+}
+div.newsList div.card div.newsImg{
+    max-height: 193px;
+    overflow: hidden;
+}
+@media only screen and (max-width:768px){
+    div.newsList{
+        max-width: 100% !important;
+        margin-top: 5% !important;
+    }
+    div.newsList:nth-child(1){
+        margin-top: 0 !important;
+    }
+    div.newsList:nth-child(2n),div.newsList:nth-child(3n){
+        margin-left: 0 !important;
+    }
+    div.newsList div.card div.newsImg{
+        max-height: 240px;
+    }
+}
+div.newsList div.card-body{
+    padding: 10px;
+    padding-top:0; 
+}
+div.newsList div.card-body div.judul{
+    line-height: 1.5em;
+    height: 3em;
+}
+div.newsList div.card-body div.isi{
+    display: block;
+    display: -webkit-box;
+    max-width: 100%;
+    height: 100px;
+    margin: 0 auto;
+    text-align: justify;
+    text-justify: inter-character;
+    line-height: 25px;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+div.headerProduk div, div.headerLokasi div, div.headerPromo div{
+    padding: 8px 25px;
+    font-size: 20px;
+    font-weight: 500;
+}
+div.tab-content{
+    font-weight: 500;
+}
+div.tab-pane h5{
+    text-transform: uppercase;
+}
+div#sectionLokasi div:nth-child(odd) table.dealer{
+    background-color: lightgray;
+}
+table.dealer{
+    width: 100%;
+    padding: 10px 0 !important;
+    font-size: 13px;
+}
+table.dealer tr td,table.dealer tr th{
+    padding: 0 10px !important;
+}
+table.dealer thead td{
+    font-size: 14px;
+}
+table.dealer thead th{
+    font-size: 16px;
+    line-height: 20px;
+}
+table.dealer td:nth-child(1){
+    width: 10% !important;
+}
+@media only screen and (max-width:992px) and (min-width:768px){
+    div#sectionLokasi div:nth-child(odd) table.dealer{
+        background-color: white;
+    }
+    div#sectionLokasi div:nth-child(4n-3) table.dealer{
+        background-color: lightgray;
+    }
+    div#sectionLokasi div:nth-child(4n) table.dealer{
+        background-color: lightgray;
+    }
+}
+table.dealer tfoot a{
+    -webkit-appearance: none;
+}
+
+
+/*Product CSS*/
+div.scrollMenu{
+    /*background-image: linear-gradient(to right,#afed20,#6cc467);*/
+    background-color: #274293;
+    overflow: auto;
+    white-space: nowrap;
+    position: sticky;
+    top:0;
+    z-index: 3 !important; 
+}
+div.scrollMenu a{
+    display: inline-block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 500;
+    text-transform: uppercase;
+    vertical-align: middle;
+    padding: 16px;
+    margin: 0;
+}
+div.scrollMenu a:hover{
+    background-color: #ffffff;
+    color: #274293;
+}
+div.bannerProduct{
+    position: relative
+}
+ul.menuProduct{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+ul.menuProduct li{
+    list-style: none;
+    height: 33.33%;
+    width: 20%;
+    margin-left: 80%;
+    overflow: hidden;
+}
+@media only screen and (max-width:768px){
+    ul.menuProduct{
+        position: relative;
+        bottom: 0;
+        display: flex;
+    }
+    ul.menuProduct li{
+        display: flex;
+        margin-left: 0;
+        width: 33.33%;
+        height: 100%;
+    }
+}
+ol.carousel-indicators{
+    z-index: 1;
+}
+div.tool{
+    flex-wrap: wrap;
+    display: flex !important;
+}
+div.tool div{
+    width: 50%;
+}
+div.tool div div:nth-child(1){
+    color:#1da1f2;
+    font-size:22px;
+    margin-bottom:10px;
+    width:100%;
+    font-weight: bold;
+}
+div.tool div div:nth-child(1) p{
+    margin: 0;
+}
+div.tool div div:nth-child(2){
+    font-size: 15px;
+    width:100%;
+}
+iframe.setIframe{
+    width: 600px !important;
+    height: 460px !important;
+}
+@media only screen and (max-width:768px){
+    div.tool{
+        display: block !important;
+    }
+    div.tool div{
+        width:100% !important;
+    }
+    div.tool div.tool_img{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    div.tool div.tool_img img{
+        height: 100%;
+    }
+    div.tool div div:nth-child(1){
+        font-size: 18px;
+        padding-top: 20px;
+        padding: 20px 20px 2px 20px;
+    }
+    div.tool div div:nth-child(2){
+        font-size: 16px;
+        padding: 0 20px 30px 20px;
+    }
+}
+@media only screen and (max-width:480px){
+    div.tool div div:nth-child(1){
+        font-size: 15px;
+        padding-top: 20px;
+        padding: 20px 0px 2px 0px;
+    }
+    div.tool div div:nth-child(2){
+        font-size: 11px;
+        padding: 0 0px 30px 0px;
+    }
+    iframe.setIframe{
+        width: 480px !important;
+        height: 340px !important;
+    }
+}
+div.accordionSpec div.card-body{
+    overflow: auto;    
+}
+div.accordionSpec div.card{
+    border: none !important;
+}
+div.accordionSpec div.card-header{
+    padding: 0;
+}
+div.accordionSpec button{
+    text-decoration: none !important;
+    border-radius: none !important;
+    background-color: white !important;
+    color: black;
+    font-weight: 400;
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+div.accordionSpec button:hover{
+    background-color:lightgrey !important;
+}
+table.spec{
+    font-size: 14px;
+    width: 100%;
+    margin: 0px auto;
+}
+table.spec td{
+    padding:5px 10px;
+}
+table.spec td:nth-child(1){
+    width: 25%;
+}
+table.spec tr td:not(:nth-child(1)){
+    text-align: center !important;
+}
+/*@media only screen and (max-width:840px){
+    p.featureName{
+        font-size: 15px !important;    
+    }
+    p.featureDesc{
+        font-size: 10px !important;
+    }
+}
+@media only screen and (max-width:585px){
+    p.featureName{
+        font-size: 10px !important;    
+    }
+    p.featureDesc{
+        font-size: 10px !important;
+    }
+}
+@media only screen and (max-width:497px){
+    p.featureName{
+        font-size: 8px !important;    
+    }
+    p.featureDesc{
+        font-size: 8px !important;
+        padding-top:0 !important;
+    }
+}*/
+
+/*Price-List CSS*/
+.header_pricelist p:nth-child(1){
+    font-size:40px;
+    font-weight:bold;
+}
+.header_pricelist p:nth-child(2){
+    font-size:20px;
+}
+div.pricelistDesc p:nth-child(1){
+    font-size:200%;
+    font-weight:500;
+    margin:0;
+}
+div.pricelistDesc p:nth-child(2){
+    font-size:230%;
+    font-weight:bold;
+    margin:0;
+}
+div.pricelistDesc p:nth-child(3){
+    font-size:250%;
+    font-weight:bold;
+    margin:0;
+}
+@media only screen and (max-width:768px){
+    .header_pricelist p:nth-child(1){
+        font-size:23px;
+    }
+    .header_pricelist p:nth-child(2){
+        font-size:15px;
+    }
+    div.pricelistDesc p:nth-child(1){
+        font-size:150%;
+    }
+    div.pricelistDesc p:nth-child(2){
+        font-size:170%;
+    }
+    div.pricelistDesc p:nth-child(3){
+        font-size:190%;
+    }
+}
+
+
+table.pricelist thead tr:nth-child(2) th{
+    max-width:15%;
+}
+table.pricelist tbody tr td{
+    white-space: nowrap;
+    font-size:14px;
+}
+
+/*News CSS*/
+div.newsDetail p.newsTitle{
+    font-weight:bold;
+    font-size:25px;
+    text-align: center;
+    margin-top:10px;
+    margin-bottom:10px;
+    color:#1100fe;    
+}
+div.newsDetail img{
+    max-width: 75%;
+    display: block;
+    margin: 0 auto;
+}
+div.newsDetail div.date{
+    font-size: 20px;
+}
+@media only screen and (max-width:768px){
+    div.newsDetail p.newsTitle{
+        font-size: 20px;
+    }
+    div.newsDetail img{
+        max-width: 100%;
+    }
+    div.newsDetail div.date{
+    font-size: 18px;
+    }
+}
+div.newsContent p{
+    font-family:arial;
+    text-align:justify;
+    font-size:15px;
+}
+.youtube-responsive-container {
+    position:relative;
+    padding-bottom:56.25%;
+    padding-top:30px;
+    height:0;
+    overflow:hidden;
+}
+
+.youtube-responsive-container iframe, .youtube-responsive-container object, .youtube-responsive-container embed {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+/*Simulasi-kredit CSS*/
+.header_sk p:nth-child(1){
+    font-size:40px;
+    font-weight:bold;
+}
+.header_sk p:nth-child(2){
+    font-size:20px;
+}
+div#mobil_sk img{
+    max-width: 50%;
+}
+@media only screen and (max-width:768px){
+    .header_sk p:nth-child(1){
+        font-size:23px;
+    }
+    .header_sk p:nth-child(2){
+        font-size:14px;
+    }
+    div#mobil_sk img{
+        max-width: 90%;
+    }
+}
+
+/*Booking*/
+#loader{
+    display: none;
+    position: fixed;
+    z-index: 100000;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-position: 50% 50%;
+    background-color: rgba(255, 255, 255, 0.6);
+    background-repeat: no-repeat; 
+}
+.err{
+    color: red;
+}
+#popbg {
+    display: none;
+    position:fixed;
+    z-index:1;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.5);
+}
+#popup {
+    display: none;
+    border-radius:30px;
+    border:3px solid blue;
+    width:400px;
+    height:325px;
+    position:fixed;
+    z-index:201;
+    top:50%;
+    left:50%;
+    margin-left:-200px;
+    margin-top:-180px;
+    background:#fff;
+    font-size: 18px;
+    padding:10px;
+    font-family:cursive;
+    text-align: justify;
+}
+.popup{
+    width:30%;
+    margin:0px 35%;
+}
+div.booking{
+    background-color:rgb(213,210,210);
+    padding:0;
+    width:100%;
+    padding-bottom:10px;
+}
+div.booking .form-group{
+    width:100%;
+}
+div.booking .form-control {
+    border:black solid 3px;
+    margin:0;
+}
+img.simbol{
+    margin-right:3%;
+    float:left;
+}
+span.header{
+    color:rgb(1,125,199);
+    font-size:30px;
+}
+input.nopol{
+    text-transform: uppercase;
+}
+div.booking textarea{
+    height: 300px;
+}
+button.submit{
+    width:100px; 
+    padding:5px; 
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+button.submit:hover{
+    background-color: #1100fe;
+    color: white;
+}
+button.reset{
+    width:70px; 
+    padding:5px; 
+    display: inline-block;
+}
+button.reset:hover{
+    background-color: red;
+    color: white;
+}
+
